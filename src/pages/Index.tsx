@@ -1,13 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Helmet } from "react-helmet-async";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Calculator from "@/components/Calculator";
+import WhyUs from "@/components/WhyUs";
+import Testimonials from "@/components/Testimonials";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <>
+      <Helmet>
+        <title>CoolFeedback — Отзывы на Яндекс.Картах и 2ГИС</title>
+        <meta
+          name="description"
+          content="Увеличьте доверие к вашему бизнесу. Настоящие отзывы на Яндекс.Картах и 2ГИС, которые работают на вас. Быстро. Надежно. Результативно."
+        />
+        <meta name="keywords" content="отзывы, яндекс карты, 2гис, продвижение бизнеса, репутация" />
+      </Helmet>
+
+      <div className="min-h-screen">
+        <Header />
+        <main className="pt-16 md:pt-20">
+          <Hero />
+          <Calculator />
+          <WhyUs />
+          <Testimonials />
+        </main>
+        <Footer />
       </div>
-    </div>
+    </>
   );
 };
 
